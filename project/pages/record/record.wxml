@@ -1,0 +1,38 @@
+<!--pages/record/record.wxml-->
+<view class="container">
+  <view class="page-body">
+    <scroll-view scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;'>
+      <block wx:for="{{recordList}}" wx:key="recordList">
+        <view class="section">
+          <view class="section_left">
+            <view class="big_title">
+              <text>{{item.companyName}}</text>
+            </view>
+            <view class="sec_title">
+              <text>{{item.officeAddress}}</text>
+            </view>
+            <view class="visitor-content">
+              <view class="cause">
+                <text>访问事由:</text>
+                <text>{{item.visitorType}}</text>
+              </view>
+              <view class="times">
+                <text>访问时间</text>
+                <text>{{item.visitStartTime}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="section_right">
+            <view class="forward" data-info="{{item}}">
+             <button open-type="share" data-index="{{index}}"></button>
+              <image src="../../images/forward.png"></image>
+            </view>
+            <view class="delete" data-id="{{item.id}}" bindtap="invitationDelete">
+              <image src="../../images/red_delete.png"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

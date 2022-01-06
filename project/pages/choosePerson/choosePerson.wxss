@@ -1,0 +1,128 @@
+/* pages/choosePerson/choosePerson.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.page-body {
+  margin:30rpx 30rpx 0 30rpx;
+}
+
+/***搜索****/
+.info-search{
+  padding:30rpx;
+  background-color: #fff;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center; 
+  width:100%;
+  height:80rpx;
+  background-color:whitesmoke;
+  border:1rpx solid #ddd;
+  border-radius: 20rpx;
+}
+.search input{
+  width: 80%;
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+.search image{ 
+  width:40rpx;
+  height:40rpx;
+  padding-right:20rpx;
+}
+.nofind{
+  margin-top: 40%;
+  text-align: center;
+}
+.nofind>image{
+  width: 150rpx;
+  height: 200rpx;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+  padding:0rpx 10rpx 0rpx 50rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.section .section_left{
+  padding: 30rpx 0;
+  flex: 11;
+}
+.section .section_left .big_title{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.section .section_left .big_title,.section .section_left .sec_title{
+  padding-bottom: 20rpx;
+}
+.section .section_left .sec_title{
+  font-size: 28rpx;
+}
+.section .section_left .big_title>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.section .section_left .visitor-content{
+ font-size:28rpx;
+}
+.section .section_left .visitor-content .cause,.section .visitor-content .times{
+  display: inline-block;
+}
+.section .section_left .visitor-content .cause{
+  padding-right:40rpx;
+}
+/* .section .section_right{
+  padding: 30rpx 0;
+  border-left: 1rpx solid #ccc;
+  flex: 1;
+}  */
+.section .section_right .visitor_state{
+  width: 100%;
+  height: 100%;
+  margin: 0 20rpx;
+  line-height: 8;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28rpx;
+  border-left:2rpx solid #ccc; 
+} 
+.green{
+  color: #50a14f;
+  font-weight:900;
+}
+.red{
+  color:red;
+  font-weight: 900;
+}
+.pop{
+  color: #e45649;
+  font-weight: 900;
+}
+
+/*
+*获取大图
+*/
+.bigImg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.bigImg .imgContent{
+  margin-top:20%; 
+  width: 100%;
+  height: 750rpx;
+}
+.bigImg image{
+   width: 100%;
+   height: 100%;
+}

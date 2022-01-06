@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "未审核信息",
+  "navigationBarBackgroundColor": "#0079FE",
+  "enablePullDownRefresh": false,
+  "usingComponents": {}
+}

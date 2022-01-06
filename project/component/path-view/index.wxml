@@ -1,0 +1,49 @@
+<!--components/path-view/path-view.wxml-->
+<view>
+  <block wx:if="{{pathMode === 'mode1'}}">
+    <view class="path">
+      <view class="btn"
+            data-index="{{0}}"
+            bindtap="toPath">{{app}}</view>
+            <view class='arrow' hidden='{{arrow}}'>></view>
+      <view class="btn"
+            bindtap="toPath"
+            data-index="{{index+1}}"
+            wx:key="{{index}}"
+            wx:for="{{currentPath}}">{{item.text}}<view class="arrow">></view></view>
+    </view>
+  </block>
+  <!-- <block wx:elif="{{pathMode === 'mode2'}}">
+    <view class="path">
+      <view class="btn"
+            wx:if="{{currentPath.length !==0}}"
+            bindtap="toPath">返回上级</view>
+      <view class="btn"
+            bindtap="toPath"
+            data-index="{{index}}"
+            wx:key="{{index}}"
+            wx:for="{{currentPath}}">{{item.text}}</view>
+    </view>
+  </block> -->
+  <view class="list-view">
+    <block wx:for="{{outValue}}"
+          wx:key="{{index}}">
+    <view class="list-view-item"
+          bindtap="tapItem"
+          data-text="{{item[contentKey]}}"
+          data-index="{{index}}" hidden='{{listView}}'>
+      <text class="title"
+            space="ensp">{{item[contentKey]}} </text>
+      <view class="btn3"
+            catchtap="tapBtn3"
+            data-item="{{item.title}}"><image src='../../images/qrCode.png'></image></view>
+      <view class="btn1"
+            catchtap="tapBtn1"
+            data-item="{{item.title}}"><image src='../../images/person.png'></image></view>
+      <view class="btn2"
+            catchtap="tapBtn2"
+            data-item="{{item.title}}" data-id="{{index}}"><image src='../../images/delete.png'></image></view>      
+    </view>
+    </block>
+  </view>
+</view>

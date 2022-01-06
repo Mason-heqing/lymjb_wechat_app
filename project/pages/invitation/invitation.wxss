@@ -1,0 +1,177 @@
+/* pages/invitation/invitation.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.page-body {
+  width: 100%;
+}
+.my-header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 160rpx; */
+  padding: 0 10rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+}
+.my-info{
+  width: 100%;
+}
+ .list-msg2{
+   display: flex;
+   flex-direction: column;
+   flex: 11;
+   padding:4rpx 20rpx;
+   /* border:1px solid #666; */
+   /* border-radius: 10rpx; */
+ }
+ .list-msg2 .companyName{
+  height: 80rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+ }
+ .list-msg2 .address{
+   display: flex;
+   align-items: center;
+    /* height:80rpx; */
+   font-size: 28rpx;
+ }
+ .arraw{
+   display: flex;
+   flex: 1;
+   align-items: center;
+   /* height: 160rpx;
+   line-height:160rpx; */
+   padding-right: 22rpx;
+ }
+ .arraw>image{
+    width: 30rpx;
+    height: 30rpx;
+    padding-left: 10rpx;
+ }
+ .list-msg2>image:nth-child(1){
+   position: relative;
+   top: 10rpx;
+   width: 60rpx;
+   height: 40rpx;
+ }
+ .list-msg2>image:nth-child(3){
+   position: relative;
+   left:376rpx;
+   top:0rpx;
+   width: 20rpx;
+   height: 20rpx;
+ }
+ .list-msg2 text{
+   font-size: 30rpx;
+   padding-top: 5rpx;
+ }
+.section {
+  display: flex;
+  /* margin-bottom: 30rpx; */
+  padding: 0 38rpx;
+  height: 130rpx;
+  align-items: center;
+  background-color: #fff;
+  border-bottom:1rpx solid #ccc;
+}
+.select_box {
+    width:100%;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+    font-size: 30rpx;
+    color: #666;
+    /* border:1px solid #ccc; */
+    background-color: #fff;
+    /* border: 1px solid #666; */
+    border-top:none;
+}
+.select_one {
+    padding: 0 60rpx;
+    height: 100rpx;
+    line-height:100rpx;
+    border-bottom: 1px solid #ccc;
+}
+.section__title {
+  display: flex;
+  width: 40%;
+  flex-grow: 1;
+  font-size: 28rpx;
+  align-items: center;
+}
+.section__title .asterask{
+  font-size: 28rpx;
+  font-weight: hold;
+  color: red;
+}
+ .section-right{
+  justify-content: flex-end;
+  color: #999;
+}
+.section-right .right_img{
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 10rpx;
+}
+.section_name {
+  width: 60%;
+  flex-grow: 2;
+  justify-content: flex-end;
+  font-size: 28rpx;
+  white-space: pre-wrap;
+}
+.section_name .big_title{
+  font-size:34rpx;
+  font-weight: bold;
+}
+.section_name .sec_title{
+  font-size:28rpx;
+}
+.section_name .space{
+  height: 20rpx;
+}
+.section_name picker>image{
+  display: inline-block;
+}
+.section__title>.frim_img{
+  width: 50rpx;
+  height: 50rpx;
+  padding-right: 20rpx;
+}
+.first_row{
+  margin-top: 40rpx;
+}
+.my_firm{
+  text-align: right;
+}
+.my_firm> .section_name .right_img{
+  width: 30rpx;
+  height: 30rpx;
+}
+.my_firm>.section_name text{
+  padding-right: 10rpx;
+  font-size: 28rpx;
+  color:#888;
+}
+.send_intitation{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 200rpx;
+  width: 90%;
+  margin: auto;
+}
+.send_intitation .submit,.send_intitation .sendShare{
+  flex:1;
+}
+.send_intitation button {
+
+  font-size: 30rpx;
+  background-color: #0079FE;
+  color: #fff;
+}

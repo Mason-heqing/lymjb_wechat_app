@@ -1,0 +1,86 @@
+/* components/path-view/path-view.wxss */
+.path {
+  display: flex;
+  padding: 0 0 0 20rpx;
+}
+.path {
+  min-height: 30px;
+  flex-wrap: wrap;
+  background-color:#fff; 
+  margin: 30rpx 0;
+  padding: 30rpx 30rpx 5rpx 30rpx;
+}
+.path .btn {
+  display: flex;
+  flex: rows;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  height: 20px;
+  border-radius: 2px;
+  color: #333;
+  font-size:30rpx;
+}
+.path .btn:last-child>.arrow{
+   display: none;
+}
+.list-view {
+  width: 100%;
+  background-color:#fff; 
+}
+.list-view-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-top: -1rpx;
+  width: 100%;
+  padding: 16rpx 0;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 2rpx;
+}
+.list-view-item .title {
+  padding-left: 30rpx;
+  font-size:28rpx;
+  line-height: 80rpx;
+}
+.list-view-item .tip {
+  font-size:24rpx;
+  line-height: 80rpx;
+}
+.list-view-item .btn1 {
+  position: absolute;
+  top:14rpx;
+  right:96rpx;
+  padding: 20rpx;
+}
+.list-view-item .btn2 {
+  position: absolute;
+  top:14rpx;
+  right: 20rpx;
+  padding: 20rpx;
+}
+.list-view-item .btn3{
+  position: absolute;
+  top: 18rpx;
+  right:170rpx;
+  padding: 20rpx;
+}
+.list-view-item .btn3 .share{
+  position: absolute;
+  top: 26rpx;
+  left: 10rpx;
+   width: 20rpx;
+  height: 40rpx;
+  background: transparent;
+  border:1px solid transparent;
+}
+.list-view-item .btn3 .share::after{
+  border-color:transparent;
+}
+image{
+  width:36rpx;
+  height:36rpx;
+}
+.arrow{
+  font-size: 30rpx;
+}

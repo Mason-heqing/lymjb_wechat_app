@@ -1,0 +1,81 @@
+<!--pages/interlinkage/interlinkage.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='section sec_header' bindtap='personDetial'>
+        <view class='section_name'>
+          <view class="big_title">
+            <input name="companyName" hidden='true' value="{{form.companyName}}" />
+            <text>{{form.companyName}}</text>
+          </view>
+          <view class="space"></view>
+          <view class="sec_title">
+            <input name="companyId" hidden='true' value="{{form.companyId}}" />
+            <input name="id" hidden='true' value="{{form.id}}" />
+            <input name="wxUserId" hidden='true' value="{{form.wxUserId}}" />
+            <input name="address" hidden='true' value="{{form.address}}" />
+            <text>{{form.address}}</text>
+          </view>
+          <view class="space"></view>
+          <view class="sec_title">
+            <text>访问事由:</text>
+            <input name="visitorType" hidden='true' value="{{form.visitorType}}" />
+            <text>{{form.visitorType}}</text>
+          </view>
+          <view class="space"></view>
+          <view class="sec_title">
+            <text>访问时间:</text>
+            <input name="date" hidden='true' value="{{form.date}}" />
+            <text>{{form.date}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='section my_firm' hidden='{{faceEnabled}}'  bindtap='camera'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>{{faceLabel}}</text>
+        </view>
+        <view class="section_name">
+          <input name="faceImgUrl" style="text-align:right;" hidden='true' value="{{form.faceImgUrl}}" placeholder="请输入姓名" />
+          <view class="photo">
+            <image src='{{form.faceImg}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class='section my_firm'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>姓名</text>
+        </view>
+        <view class='section_name'>
+          <input name="name" hidden="{{inputName}}" value="{{form.name}}" style="text-align:right;" data-name='name' bindinput='trim' placeholder="请输入姓名" />
+          <text hidden="{{textName}}">{{form.name}}</text>
+        </view>
+      </view>
+      <view class='section my_firm'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>手机号码</text>
+        </view>
+        <view class='section_name'>
+        <input name="phone" style="display:inline-block;width:{{phoneValue}}%;text-align:right;padding-right:10rpx;line-height:2;padding-bottom:10rpx;color:#888;" value="{{form.phone}}" disabled='disabled'  />
+          <button style='display:inline-block;width:50%;background:#0079FE;color:#fff;font-size:28rpx;margin-top:-40rpx;' open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" hidden='{{getPhone}}'>获取授权</button>
+          <input name="invitationToken" hidden='true' value="{{form.invitationToken}}" />
+        </view>
+      </view>
+      <view class='section my_firm' hidden='{{idNoEnabled}}'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>{{idNoLabel}}</text>
+        </view>
+        <view class='section_name'>
+          <input name="idNo" hidden="{{inputIdNo}}" value="{{form.idNo}}" placeholder="请输入身份证号码" style="text-align:right;" data-name='idNo' bindinput='trimIdNo' />
+          <text hidden="{{textIdNo}}">{{form.idNo}}</text>
+        </view>
+      </view>
+      <view class="send_intitation">
+        <button form-type="submit">接受邀请</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/invitationDetail/invitationDetail.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <view class="info-content">
+      <view class='my-header'>
+      <view class='list-msg2'>
+        <view class="companyName">
+          <input name="tihuoWay" hidden='true' value="{{form.tihuoWay}}" />
+          <text>{{conmpayName}}</text>
+        </view>
+        <view class="address">
+          <input name="officeAddress" hidden='true' data-name='officeAddress' bindinput='trimOfficeAddress' value="{{form.officeAddress}}" />
+          <text>{{officeAddress}}</text>
+        </view>
+        <view>
+          <input name="id" hidden='true' value="{{form.id}}" />
+        </view>
+      </view>
+    </view>
+    <view class='section my_firm'>
+      <view class='section__title'>
+        <text class="asterask">*</text>
+        <text>访问事由:</text>
+        <text>{{visitorType}}</text>
+      </view>
+      <view class='section__title'>
+        <text>访问日期:</text>
+        <text>{{visitStartTime}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class="tips">
+    <text>温馨提示 : 将邀请链接发送到您要邀请的访客微信或微信群,如果想邀请更多访客,可在邀请记录里面点击发送按钮继续邀请,邀请链接当天有效.</text>
+    <view class="send_intitation">
+      <view class="submit">
+        <button open-type='share'>发送邀请</button>
+      </view>
+    </view>
+  </view>
+</view>

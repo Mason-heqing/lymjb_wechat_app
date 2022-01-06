@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/choosePerson/choosePerson",
+    "pages/makeVisitor/makeVisitor",
+    "pages/interlinkage/interlinkage",
+    "pages/information/information",
+    "pages/visitorMyself/visitorMyself",
+    "pages/invitationLink/invitationLink",
+    "pages/invitation/invitation",
+    "pages/invitationDetail/invitationDetail",
+    "pages/record/record",
+    "pages/guest/guest",
+    "pages/qrcode/qrcode",
+    "pages/visitor/visitor",
+    "pages/order/order",
+    "pages/home/home",
+    "pages/firmShare/firmShare",
+    "pages/changeInfo/changeInfo",
+    "pages/details/details",
+    "pages/employees/employees",
+    "pages/myself/myself",
+    "pages/user/user",
+    "pages/audit/audit",
+    "pages/share/share",
+    "pages/camera/camera",
+    "pages/upload/upload"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color":"#999",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/audit/audit",
+        "iconPath": "/images/audit_offline.png",
+        "selectedIconPath": "/images/audit_online.png",
+        "text": "审核"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/images/home_offline.png",
+        "selectedIconPath": "/images/home_online.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "/images/user_offline.png",
+        "selectedIconPath": "/images/user_online.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

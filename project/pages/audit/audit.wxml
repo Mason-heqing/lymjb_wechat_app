@@ -1,0 +1,65 @@
+<view class="container" hidden='{{allContent}}'>
+  <!-- <view class='my-header'>
+    <text>未审核信息</text>
+  </view> -->
+  <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='输入员工姓名' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      <image class="" src='/images/search.png' bindtap='query'></image>
+    </view>
+  </view>
+  <scroll-view scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;' bindscroll="scroll" hidden='{{auditContent}}'>
+    <view class="approved-content">
+    <view class="approved-ul" wx:for="{{auditList}}" wx:key="createTime">
+      <view class="approved-li">
+        <view class="approved-title">
+          <text class="left">时间：</text>
+          <text class="right">{{item.createTime}}</text>
+        </view>
+        <view class="approved-body">
+          <view class='approved-content'>
+            <view class="approved-visitors">
+              <view class="left"><text>姓名：</text></view>
+              <view class="right"><text>{{item.name}}</text></view>
+            </view>
+            <view class="approved-surveyed">
+              <view class="left"><text>手机号：</text></view>
+              <view class="right"><text>{{item.mobilePhone}}</text></view>
+            </view>
+            <view class="distribution">
+              <text></text>
+            </view>
+            <view class="times">
+              <view class="left"><text>性别：</text></view>
+              <view class="right"><text>{{item.sex}}</text></view>
+            </view>
+            <!-- <view class="times">证件号码：
+              <text>{{item.idNo}}</text>
+            </view> -->
+             <view class="distribution">
+              <view class="left"><text>绑定企业：</text></view>
+              <view ><text>{{item.companyName}}</text></view>
+            </view>
+          </view>
+          <view class='approved-image' bindtap='getBigImg' data-img="{{item.faceImg}}">
+            <image src='{{item.faceImg}}'></image>
+          </view>
+          <view class='btns'>
+            <button bindtap='through' data-isPass="1" data-id="{{item.id}}" data-index="{{index}}">通过</button>
+            <button bindtap='refused' data-isPass="2" data-id="{{item.id}}" data-index="{{index}}">不通过</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+  <view class='nofind' hidden='{{nofind}}'>
+     <image src='../../images/nofind.png'></image>
+  </view>
+  <!-- <button class="refresh" bindtap='refresh'>刷新</button> -->
+</view>
+<view class='bigImg' hidden='{{bigImg}}' bindtap="closeBigImg">
+  <view class='imgContent'>
+     <image src='{{showBigImg}}'></image>
+  </view>
+</view>

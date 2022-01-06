@@ -1,0 +1,29 @@
+<!--pages/guest/guest.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <view class='section' bindtap='personDetial'>
+      <view class='section_name'>
+        <view class="photo">
+          <image src='{{faceImg}}'></image>
+        </view>
+      </view>
+      <view class='section__title section-right'><text>{{name}}</text><image class='right_img' src='../../images/arrow.png'></image></view>
+      
+    </view>
+    <view class='section my_firm'>
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/firm.png"></image>
+        <text>我绑定的企业</text>
+      </view>
+      <view class='section_name' bindtap='bindFirm'>
+        <text>{{firm}}</text>
+      </view>
+    </view>
+    <view class="qrcode">
+       <image src='{{imgQrcode}}'></image>
+       <view class="codesize">
+        <text>{{qrcodeText}}</text>
+       </view>
+    </view>
+  </view>
+</view>

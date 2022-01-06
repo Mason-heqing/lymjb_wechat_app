@@ -1,0 +1,71 @@
+<!--information.wxml-->
+<view class="container">
+  <!-- <view class='my-header'>
+    <text>个人信息</text>
+  </view> -->
+  <view class="page-body" hidden="{{personInfo}}">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section" hidden='{{faceEnabled}}' bindtap='camera'>
+        <view class="section__title">
+          <text class="star">*</text>{{faceLabel}}</view>
+        <view class="section_name">
+          <input name="faceImgUrl" style="text-align:right;" hidden='true' value="{{form.faceImgUrl}}" placeholder="请输入姓名" />
+          <view class="photo">
+            <image src='{{form.faceImg}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          <text class="star">*</text>姓名</view>
+        <view class="section_name">
+          <input name="name" style="text-align:right;" data-name='name' bindinput='trim' value="{{form.name}}" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="section" hidden='{{idNoEnabled}}'>
+        <view class="section__title">
+         {{idNoLabel}}</view>
+        <view class="section_name">
+          <input name="idcard" style="text-align:right;" data-name='idcard' bindinput='trimIdcard' value="{{form.idcard}}" placeholder="请输入身份证号码" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          手机号</view>
+        <view class="section_name">
+          <input name="phone" style="text-align:right;" data-name='phone' maxlength="11" bindinput='trimPhone' value="{{form.phone}}" placeholder="请输入手机号码" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">性别</view>
+        <!-- <view class="section_name">
+          <radio-group name="sex" class="gander">
+            <label>
+              <radio value="1" />男</label>
+            <label>
+              <radio value="2" />女</label>
+          </radio-group>
+        </view> -->
+        <view class="section_name">
+          <radio-group name="radio" class="gander">
+            <label wx:for='{{form.gender}}' wx:key="gender">
+              <radio value="{{item.value}}" checked='{{item.checked}}' />{{item.name}}</label>
+          </radio-group>
+        </view>
+      </view>
+      <!-- <view class="section">
+        <view class="section__title">证件号</view>
+        <view class="section_name">
+          <input name="idNo" style="text-align:right;" value="{{form.idNo}}" placeholder="请输入证件号" />
+        </view>
+      </view> -->
+      <view style="width:100%;height:2rpx;border-top:1rpx solid #eee"></view>
+      <view class="btn-area">
+        <button form-type="submit">提交</button>
+      </view>
+    </form>
+  </view>
+  <view class="uploadInfo" hidden='{{uploadInfo}}' bindtap='showInFo'>
+    <image src='../../images/info.png'></image>
+  </view>
+</view>

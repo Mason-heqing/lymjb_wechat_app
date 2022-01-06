@@ -1,0 +1,58 @@
+<!--changeInfo.wxml-->
+<view class="container">
+  <!-- <view class='my-header'>
+    <text>个人信息</text>
+  </view> -->
+  <view class="page-body" hidden="{{personInfo}}">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section" hidden='{{faceEnabled}}' bindtap='camera'>
+        <view class="section__title">
+          <text class="star">*</text>{{faceLabel}}</view>
+        <view class="section_name">
+           <input name="faceImgUrl"   style="text-align:right;" hidden='true' value="{{form.faceImgUrl}}"  />
+          <view class="photo">
+            <image src='{{form.faceImg}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          <text class="star">*</text>姓名</view>
+        <view class="section_name">
+          <input name="name" style="text-align:right;" data-name='name' bindinput='trim' value="{{form.name}}" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="section" hidden='{{idNoEnabled}}'>
+        <view class="section__title">
+          <text class="star">*</text>{{idNoLabel}}</view>
+        <view class="section_name">
+          <input name="idcard" style="text-align:right;" data-name='idcard' bindinput='trimIdcard' value="{{form.idcard}}" placeholder="请输入身份证号码" />
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">
+          <text class="star">*</text>手机号</view>
+        <view class="section_name">
+          <input name="phone" style="display:inline-block;width:{{phoneValue}}%;text-align:right;padding-right:10rpx;line-height:2;padding-bottom:10rpx;" value="{{form.phone}}" disabled='disabled'  />
+          <button style='display:inline-block;width:38%' open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" hidden='{{getPhone}}'>获取授权</button>
+          <input name="invitationToken" hidden='true' value="{{form.invitationToken}}"></input>
+        </view>
+      </view>
+      <view class="section">
+        <view class="section__title">性别</view>
+        <view class="section_name">
+          <radio-group name="radio" class="gander">
+            <label wx:for='{{form.gender}}' wx:key="{{form.gender}}"><radio value="{{item.value}}" checked='{{item.checked}}' />{{item.name}}</label>
+          </radio-group>
+        </view>
+      </view>
+      <view style="width:100%;height:2rpx;border-top:1rpx solid #eee"></view>
+      <view class="btn-area">
+        <button form-type="submit">加入{{btnName}}</button>
+      </view>
+    </form>
+  </view>
+  <view class="uploadInfo" hidden='{{uploadInfo}}' bindtap='showInFo'>
+    <image src='../../images/info.png'></image>
+  </view>
+</view>

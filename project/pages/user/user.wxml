@@ -1,0 +1,87 @@
+<!--pages/details/details.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <view class='section' style="height:120rpx;" bindtap='personDetial'>
+      <view class='section_name'>
+        <view class="photo">
+          <image src='{{faceImg}}'></image>
+        </view>
+      </view>
+      <view class='section__title section-right'>
+        <text>{{name}}</text>
+        <image class='right_img' src='../../images/arrow.png'></image>
+      </view>
+    </view>
+    <view class='section my_firm first_row'>
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/firm.png"></image>
+        <text>我绑定的企业</text>
+      </view>
+      <view class='section_name' bindtap='bindFirm'>
+        <text>{{firm}}</text>
+      </view>
+    </view>
+    <view class='section my_firm' bindtap="showQrCode">
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/qrCode.png"></image>
+        <text>我的二维码</text>
+      </view>
+      <view class='section_name'>
+        <image class="right_img" src='../../images/arrow.png'></image>
+      </view>
+    </view>
+    <view class='section my_firm' bindtap="inviation">
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/invitation.png"></image>
+        <text>邀请访客</text>
+      </view>
+      <view class='section_name'>
+        <image class="right_img" src='../../images/arrow.png'></image>
+      </view>
+    </view>
+    <view class='section my_firm' bindtap="visitor">
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/visitor.png"></image>
+        <text>我的访客</text>
+      </view>
+      <view class='section_name' style="vertical-align: middle;text-align: right">
+        <view class="message-info" hidden="{{messageInfo}}"></view>
+        <image class="right_img" src='../../images/arrow.png'></image>
+      </view>
+    </view>
+    <view class='section my_firm' bindtap="order">
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/order.png"></image>
+        <text>我的预约</text>
+      </view>
+      <view class='section_name'>
+        <image class="right_img" src='../../images/arrow.png'></image>
+      </view>
+    </view>
+    <view class='section my_firm' bindtap="record">
+      <view class='section__title'>
+        <image class='frim_img' src="../../images/record.png"></image>
+        <text>邀请记录</text>
+      </view>
+      <view class='section_name'>
+        <image class="right_img" src="../../images/arrow.png"></image>
+      </view>
+    </view>
+    <!-- <view class="playQrcode" hidden="{{playQrcode}}"  bindtap='hideInFo'>
+       <image src='../../images/qrCode.png'></image>
+    </view> -->
+
+
+  </view>
+
+  <!-- <navigator open-type="exit" target="miniProgram">关闭小程序</navigator> -->
+
+</view>
+<view class="qrcode" hidden="{{playQrcode}}" bindtap='hideInFo'>
+  <view class="qr-content">
+    <image src='{{imgQrcode}}'></image>
+    <view class="codesize">
+      <text>{{qrcodeText}}</text>
+    </view>
+  </view>
+</view>

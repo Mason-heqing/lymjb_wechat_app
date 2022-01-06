@@ -1,0 +1,112 @@
+/* pages/myself/myself.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.page-body {
+  width: 100%;
+}
+.section {
+  display: flex;
+  /* margin-bottom: 30rpx; */
+  padding: 0 38rpx;
+  height: 100rpx;
+  align-items: center;
+  background-color: #fff;
+  border-bottom:1rpx solid #eaeaea;
+}
+.section__title {
+  display: flex;
+  width: 40%;
+  flex-grow: 1;
+  font-size: 28rpx;
+  align-items: center;
+}
+ .section-right{
+  justify-content: flex-end;
+  color: #999;
+}
+.section-right .right_img{
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 10rpx;
+}
+.first_row{
+  margin-top: 40rpx;
+}
+.my_firm> .section_name>.right_img{
+  width: 30rpx;
+  height: 30rpx;
+}
+.section_name {
+  width: 60%;
+  flex-grow: 2;
+  justify-content: flex-end;
+  font-size: 28rpx;
+  text-align: right;
+  color:#888;
+  white-space: pre-wrap;
+}
+.section_name .photo {
+  position: absolute;
+  top: 10rpx;
+  left: 26rpx;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.section_name .photo>image {
+  width: 100%;
+  height: 100%;
+}
+.section__title>.frim_img{
+  width: 50rpx;
+  height: 50rpx;
+  padding-right: 20rpx;
+}
+.my_firm{
+  margin-top:6rpx;
+}
+.my_firm>.section_name text{
+  text-decoration: underline;
+  color:skyblue;
+}
+.qrcode{
+ position: absolute;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+ text-align: center;
+ background-color: rgba(0,0,0,0.2);
+}
+.qrcode .qr-content{
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top: -215rpx;
+  margin-left: -248rpx;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.qrcode image{
+  width: 400rpx;
+  height:400rpx;
+}
+.qrcode .codesize{
+  font-size: 28rpx;
+  color:#888;
+}
+
+.message-info{
+  display: inline-block;
+  width: 12rpx;
+  height: 12rpx;
+  background-color:red;
+  border: 2rpx;
+  border-radius: 50%; 
+  vertical-align: middle;
+}

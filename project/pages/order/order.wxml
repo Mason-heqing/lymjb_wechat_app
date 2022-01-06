@@ -1,0 +1,158 @@
+<!--pages/visitor/visitor.wxml-->
+<view class="container" hidden="{{allContent}}">
+  <!-- <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='输入访客姓名或者访客手机号进行查询' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      <image class="" src='/images/search.png' bindtap='query'></image>
+    </view>
+  </view> -->
+  <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!--Tab布局-->
+    <view class="tabbarHeader">
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}} topTabbar" bindtap='titleClick' data-idx='0'>
+          <text>待审核</text>
+        </view>
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}} topTabbar" bindtap='titleClick' data-idx='1'>
+          <text>预约成功</text>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}} topTabbar" bindtap='titleClick' data-idx='2'>
+          <text>已拒绝</text>
+        </view>
+      </view>
+    </view>
+    <swiper class='swiper' bindchange='pagechange' style='height:{{parentScrollHeight}}px;' current='{{currentIndex}}'>
+      <swiper-item class='swiper'>
+        <!-- <view wx:for="{{firstList}}" wx:key="firstList"  wx:for-item="item" class='record-item'>
+            <view class='name'>
+              <span>名称：{{item.name}}</span>
+              <span>面额：{{item.money}}</span>
+            </view>
+          </view> -->
+        <view class="page-body">
+          <scroll-view scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;' bindscroll="scroll" hidden='{{fisrtContent}}'>
+            <block wx:for="{{firstList}}" wx:key="firstList">
+              <view class="section">
+                <view class="section_left">
+                  <view class="big_title">
+                      <text>{{item.targetCompanyName}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>{{item.targetCompanyAddress}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>访问事由:</text>
+                      <text>{{item.visitReason}}</text>
+                    </view>
+                    <view class="visitor-content">
+                      <view class="cause">
+                        <text>访问时间:</text>
+                        <text>{{item.visitStartTime}}</text>
+                      </view>
+                    </view>
+                </view>
+                <view class="section_right">
+                  <view class="visitor_state" data-id="{{item.id}}" bindtap="cancel">
+                    <view class="delete">
+                      <text>取消</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class='nofind' hidden='{{firstNofind}}'>
+            <image src='../../images/nofind.png'></image>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='swiper' class='swiper'>
+        <view class="page-body">
+          <scroll-view scroll-y bindscrolltolower="successUpper" style='height:{{scrollHeight}}px;' bindscroll="scroll" hidden='{{secondContent}}'>
+            <block wx:for="{{secondList}}" wx:key="secondList">
+              <view class="section">
+                <view class="section_left">
+                  <view class="big_title">
+                      <text>{{item.targetCompanyName}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>{{item.targetCompanyAddress}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>访问事由:</text>
+                      <text>{{item.visitReason}}</text>
+                    </view>
+                    <view class="visitor-content">
+                      <view class="cause">
+                        <text>访问时间:</text>
+                        <text>{{item.visitStartTime}}</text>
+                      </view>
+                      <view class="times">
+                      </view>
+                    </view>
+                </view>
+                <view class="section_right">
+                  <view class="visitor_state" data-id="{{item.id}}" bindtap="orderSuccess">
+                    <!-- <image src="../../images/close.png"></image> -->
+                   <view class="delete">
+                      <text>删除</text>
+                   </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class='nofind' hidden='{{secondNofind}}'>
+            <image src='../../images/nofind.png'></image>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='swiper' class='swiper'>
+        <view class="page-body">
+          <scroll-view scroll-y bindscrolltolower="rejectUpper" style='height:{{scrollHeight}}px;' bindscroll="scroll" hidden='{{thirdContent}}'>
+            <block wx:for="{{thirdList}}" wx:key="thirdList">
+              <view class="section">
+                <view class="section_left">
+                  <view class="big_title">
+                      <text>{{item.targetCompanyName}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>{{item.targetCompanyAddress}}</text>
+                    </view>
+                    <view class="sec_title">
+                      <text>访问事由:</text>
+                      <text>{{item.visitReason}}</text>
+                    </view>
+                    <view class="visitor-content">
+                      <view class="cause">
+                        <text>访问时间:</text>
+                        <text>{{item.visitStartTime}}</text>
+                      </view>
+                      <view class="times">
+                      </view>
+                    </view>
+                </view>
+                <view class="section_right">
+                  <view class="visitor_state" data-id="{{item.id}}" bindtap="rejectDelete">
+                    <!-- <image src="../../images/close.png"></image> -->
+                    <view class="delete">
+                      <text>删除</text>
+                   </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class='nofind' hidden='{{thirdNofind}}'>
+            <image src='../../images/nofind.png'></image>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+</view>
+<view class='bigImg' hidden='{{bigImg}}' bindtap="closeBigImg">
+  <view class='imgContent'>
+    <image src='{{showBigImg}}'></image>
+  </view>
+</view>

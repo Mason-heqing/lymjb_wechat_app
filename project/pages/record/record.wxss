@@ -1,0 +1,93 @@
+/* pages/record/record.wxss */
+/* pages/visitor/visitor.wxss */
+/* pages/order/order.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  border: none;
+  outline:none;
+}
+.page-body {
+  margin: 30rpx;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+  padding:0rpx 0rpx 0rpx 50rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.section .section_left{
+  padding: 30rpx 0;
+  flex:8;
+}
+.section .section_left .big_title{
+  padding-bottom: 20rpx;
+  font-size:34rpx;
+  font-weight: bold;
+}
+.section .section_left .sec_title{
+  padding-bottom: 20rpx;
+  font-size:28rpx;
+}
+.section .section_left .visitor-content{
+ /* display: flex;
+ flex-direction: row; */
+ font-size:28rpx;
+}
+.section .section_left .visitor-content .cause{
+  padding-right: 30rpx;
+}
+.section .section_left .visitor-content .cause,.section .visitor-content .times{
+  display:inline-block;
+  /* flex: 1; */
+}
+.section .section_right{
+  flex: 1;
+  display: flex;
+  flex-direction:column;
+  border-left: 1rpx solid #ccc;
+  
+}
+.section .section_right .forward{
+  border-bottom: 1rpx solid #ccc;
+}
+.section .section_right .forward>button{
+  position: absolute;
+  z-index: 999;
+  width: 100rpx;
+  height: 100rpx;
+  background:transparent;
+  border:none;
+  outline:none;
+}
+.section .section_right .forward>button::after{
+  border:none;
+}
+.section .section_right .forward,.section .section_right .delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;  
+  
+} 
+.section .section_right .forward image,.section .section_right .delete image{
+  width: 40rpx;
+  height: 40rpx;
+  
+}
+.green{
+  color: #50a14f;
+  font-weight:900;
+}
+.red{
+  color:red;
+  font-weight: 900;
+}
+.pop{
+  color: #e45649;
+  font-weight: 900;
+}

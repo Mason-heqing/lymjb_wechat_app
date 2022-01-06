@@ -1,0 +1,43 @@
+<!--pages/choosePerson/choosePerson.wxml-->
+<view class="container">
+  <view class="info-search">
+    <view class='search'>
+      <input type='text' placeholder='请输入被访人手机号码进行查询' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      <image class="" src='/images/search.png' bindtap='query'></image>
+    </view>
+  </view>
+  <view class="page-body">
+    <scroll-view scroll-y bindscrolltolower="upper" style='height:{{scrollHeight}}px;' bindscroll="scroll" hidden='{{visitorContent}}'>
+      <block wx:for="{{visitorList}}" wx:key="visitorList">
+        <view class="section">
+          <view class="section_left">
+            <!-- <view class="big_title" bindtap='getBigImg' data-img="{{item.imgPath}}">
+              <text>{{item.sourceName}}</text>
+              <image src="{{item.imgPath}}"></image>
+            </view> -->
+            <view class="big_title">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="sec_title">
+              <text>手机号码:</text>
+              <text>{{item.phone}}</text>
+            </view>
+            <view class="visitor-content">
+              <view class="cause">
+                <text>{{item.companyName}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="section_right">
+            <view class="visitor_state" data-id="{{item}}" bindtap="choose">
+              <text>选择</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class='nofind' hidden='{{nofind}}'>
+      <image src='../../images/nofind.png'></image>
+    </view>
+  </view>
+</view>

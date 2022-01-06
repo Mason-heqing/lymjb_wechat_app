@@ -1,0 +1,106 @@
+/* pages/interlinkage/interlinkage.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.page-body {
+  width: 100%;
+}
+.sec_header{
+  height: 300rpx !important;
+}
+.section {
+  display: flex;
+  /* margin-bottom: 30rpx; */
+  padding: 0 38rpx;
+  height: 130rpx;
+  align-items: center;
+  background-color: #fff;
+  border-bottom:1rpx solid #eaeaea;
+}
+.section__title {
+  display: flex;
+  width: 40%;
+  flex-grow: 1;
+  font-size: 28rpx;
+  align-items: center;
+}
+.section__title .asterask{
+  font-size: 28rpx;
+  font-weight: hold;
+  color: red;
+}
+ .section-right{
+  justify-content: flex-end;
+  color: #999;
+}
+.section-right .right_img{
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 10rpx;
+}
+.section_name {
+  width: 60%;
+  flex-grow: 2;
+  justify-content: flex-end;
+  font-size: 28rpx;
+  white-space: pre-wrap;
+}
+.section_name .big_title{
+  font-size:34rpx;
+  font-weight: bold;
+}
+.section_name .sec_title{
+  font-size:28rpx;
+}
+.section_name .space{
+  height: 20rpx;
+}
+.section__title>.frim_img{
+  width: 50rpx;
+  height: 50rpx;
+  padding-right: 20rpx;
+}
+.first_row{
+  margin-top: 40rpx;
+}
+.my_firm{
+  position: relative;
+  text-align: right;
+}
+.my_firm> .section_name>.right_img{
+  width: 30rpx;
+  height: 30rpx;
+}
+.my_firm>.section_name text{
+  padding-right: 10rpx;
+  font-size: 28rpx;
+  color:#888;
+}
+.send_intitation{
+  position: relative;
+  top: 200rpx;
+  width: 90%;
+  margin: auto;
+}
+.send_intitation button {
+  font-size: 30rpx;
+  background-color: #0079FE;
+  color: #fff;
+}
+
+.my_firm .photo {
+  position: absolute;
+  top: 10rpx;
+  right: 26rpx;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.my_firm .photo>image {
+  width: 100%;
+  height: 100%;
+}

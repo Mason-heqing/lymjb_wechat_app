@@ -1,0 +1,69 @@
+.carousel{
+  width: 100%;
+  background-color: rebeccapurple;
+}
+.carousel_swiper{
+  width: 100%;
+  height: 400rpx;
+  display: block;
+  position: relative;
+  background: #f4f4f4;
+}
+.carouselImg{
+  width: 100%;
+  height: 100%;
+}
+.section-item{
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 200rpx;
+  background: #ddd;
+  margin:0 50rpx 30rpx 50rpx; 
+  padding: 0 30rpx 0 80rpx;
+  overflow: hidden;
+}
+.section-item:first-child{
+  margin-top: 30rpx;
+}
+.section-item .share{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200rpx;
+  background-color: transparent;
+}
+.section-item .share::after{
+  border: none;
+}
+.section-item .item-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+.section-item .item-icon>image{
+  width: 100%;
+  height: 100%;
+}
+.section-item .item-content{
+  display: flex;
+  flex-direction: column;
+  width: 380rpx;
+  padding:30rpx;
+  overflow: hidden;
+}
+.item-content .content-title{
+  font-size: 36rpx;
+  padding-bottom: 30rpx;
+}
+.item-content .content-description{
+  font-size: 28rpx;
+  color: #666;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

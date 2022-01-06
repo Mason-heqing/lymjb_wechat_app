@@ -1,0 +1,57 @@
+<view class='container'>
+  <view class="page-section page-section-spacing swiper" hidden='{{advertising}}'>
+    <swiper class='carousel_swiper' indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
+      <block wx:for="{{carouselList}}" wx:key="key">
+        <swiper-item bindtap='chomeCarouselClick' data-url='{{item.url}}'>
+          <image class="carouselImg" src='{{item.img}}' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='page-section'>
+    <view class='section-item'>
+      <button  class="share" open-type='share'></button>
+      <view class='item-icon'>
+        <view class='item-icon'>
+          <image src='../../images/share.png'></image>
+        </view>
+      </view>
+      <view class='item-content'>
+           <view class='content-title'>
+          <text>员工邀请</text>
+        </view>
+        <view class='content-description'>
+          <text>{{shareDes}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='section-item' bindtap="registration">
+      <view class='item-icon'>
+        <image src='../../images/list.png'></image>
+      </view>
+      <view class='item-content'>
+        <view class='content-title'>
+          <text>员工登记</text>
+        </view>
+        <view class='content-description'>
+          <text>{{registrationDes}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='section-item' bindtap='management'>
+      <view class='item-icon'>
+         <view class='item-icon'>
+        <image src='../../images/moment.png'></image>
+      </view>
+      </view>
+      <view class='item-content'>
+          <view class='content-title'>
+          <text>员工管理</text>
+        </view>
+        <view class='content-description'>
+          <text>{{managementDes}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

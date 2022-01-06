@@ -1,0 +1,52 @@
+/* pages/details/details.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.page-body {
+  width: 100%;
+}
+.section {
+  display: flex;
+  margin-bottom: 30rpx;
+  padding: 0 38rpx;
+  height: 130rpx;
+  align-items: center;
+  background-color: #fff;
+}
+.section__title {
+  flex-grow: 1;
+  font-size: 30rpx;
+}
+.section_name {
+  flex-grow: 2;
+  justify-content: flex-end;
+  font-size: 30rpx;
+  text-align: right;
+  color:#888;
+}
+.section_name .photo {
+  position: absolute;
+  top: 10rpx;
+  right: 26rpx;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.section_name .photo>image {
+  width: 100%;
+  height: 100%;
+}
+.person-delete{
+  width: 80%;
+  margin:0 auto;
+  margin-bottom: 200rpx;
+}
+.person-delete>button{
+  background-color: rgb(255, 68, 58);
+  color:#fff;
+  font-size: 34rpx;
+}

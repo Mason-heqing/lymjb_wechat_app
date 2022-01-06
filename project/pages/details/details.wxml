@@ -1,0 +1,46 @@
+<!--pages/details/details.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <view class='section' hidden='{{faceEnabled}}'>
+      <view class='section__title'>{{faceLabel}}</view>
+      <view class='section_name'>
+        <view class="photo">
+          <image src='{{src}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='section__title'>姓名</view>
+      <view class='section_name'>
+        <text>{{name}}</text>
+      </view>
+    </view>
+    <view class='section' hidden='{{idNoEnabled}}'>
+      <view class='section__title'>{{idNoLabel}}</view>
+      <view class='section_name'>
+        <text>{{idcard}}</text>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='section__title'>手机号码</view>
+      <view class='section_name'>
+        <text>{{phone}}</text>
+      </view>
+    </view>
+    <view class='section'>
+      <view class='section__title'>性别</view>
+      <view class='section_name'>
+        <text>{{gender}}</text>
+      </view>
+    </view>
+    <!-- <view class='section'>
+      <view class='section__title'>证件号码</view>
+      <view class='section_name'>
+        <text>{{idcard}}</text>
+      </view>
+    </view> -->
+  </view>
+  <view class='person-delete' hidden='{{hideBtn}}'>
+     <button bindtap='deletePerson'>删除员工</button>
+  </view>
+</view>

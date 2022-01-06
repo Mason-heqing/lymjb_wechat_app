@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "上传文件",
+  "navigationBarBackgroundColor": "#0079FE",
+  "usingComponents": {
+    "uploadImages": "/component/uploadImages/index"
+  }
+}

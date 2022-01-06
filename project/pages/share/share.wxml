@@ -1,0 +1,50 @@
+<view class='container'>
+  <!-- <view class='header'>
+    <view class='titie-btn'>
+      <button bindtap="addBind">邀约绑定</button>
+    </view>
+  </view> -->
+  <view class="body">
+    <view class="ul">
+      <view class="li" wx:for="{{face_list}}" wx:key="companyName">
+        <view class="left">
+          <!-- <text class="id">{{index + 1 }}</text> -->
+          <text class="name">{{item.companyName}}</text>
+        </view>
+        <view class="right">
+        <view class='toolIcon'>
+             <image   class='shares' src='{{item.defBind == 1?"../../images/select.png":"../../images/noSelect.png"}}'></image>
+          </view>
+        <view class='toolIcon'data-index="{{index}}" data-id="{{item.id}}" bindtap="delete">
+             <image src='../../images/delete.png' class="delete"></image>
+          </view>
+          <view class='toolIcon' data-name="{{item.companyName}}" data-id="{{item.id}}" bindtap="toggle">
+             <image  class='shares' src='../../images/target.png'></image>
+          </view>
+               <!-- <button  class="share" open-type='share'></button> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='toast-box' hidden='{{!ifName}}'>
+  <view class='toastbg'></view>
+  <view class='showToast'>
+    <view class='toast-title'>
+      <text>设置名称</text>
+    </view>
+    <view class='toast-main'>
+      <view class='toast-input'>
+        <input class='inputName' maxlength='15' placeholder='请输入名称' value='{{inputValue}}' bindinput='setValue' data-name='stuEidtName'></input>
+      </view>
+    </view>
+    <view class='toast-button'>
+      <view class='button1'>
+        <button catchtap='cancel'>取消</button>
+      </view>
+      <view class='button2'>
+        <button catchtap='confirm'>确定</button>
+      </view>
+    </view>
+  </view>
+</view>

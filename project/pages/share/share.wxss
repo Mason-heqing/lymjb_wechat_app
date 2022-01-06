@@ -1,0 +1,156 @@
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30rpx;
+}
+.titie-btn{
+  width: 24%;
+  padding-right: 30rpx;
+}
+.titie-btn>button{
+  font-size: 30rpx;
+  background-color: #3399ea;
+  color: #fff;
+}
+.body{
+  padding: 30rpx 0;
+  background-color: #f0f0f0;
+}
+.ul{
+  display: flex;
+  flex-direction: column;
+}
+.li{
+  display: inline-flex;
+  align-items: center;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+  background-color:#fff; 
+}
+.left{
+  width: 60%;
+  padding-left: 30rpx;
+}
+.left .id{
+  font-size: 28rpx;
+  padding-right: 15rpx;
+}
+.left .name{
+  font-size: 30rpx;
+} 
+.right{
+  width: 40%;
+  height:100%; 
+  display: flex;flex-direction:row-reverse;
+  align-items: center;
+  justify-items: flex-end;
+}
+.right .toolIcon{
+  display: flex;
+  align-items: center;
+   height: 100%;
+   padding: 0 30rpx;
+
+}
+.right .delete{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+
+
+.toast-box {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+ 
+.toastbg {
+    opacity: 0.6;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+ 
+.showToast {
+    position: absolute;
+    opacity: 1;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40%;
+}
+ 
+.toast-title {
+    padding-left: 5%;
+    background-color: #2196f3;
+    color: white;
+    font-size: 32rpx;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-top-right-radius: 16rpx;
+    border-top-left-radius: 16rpx;
+}
+ 
+.toast-main {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: white;
+    text-align: center;
+}
+ 
+.toast-input {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #ddd;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+ 
+.toast-button {
+    display: flex;
+}
+.button2 ,.button1 {
+    width: 50%;
+}
+ 
+.button1 button {
+    width: 100%;
+    background-color: white;
+    color: grey;
+    border-radius: 0px;
+    border-bottom-left-radius: 16rpx;
+    font-size: 28rpx;
+}
+ 
+.button2 button{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border-bottom-right-radius: 16rpx;
+    font-size: 28rpx;
+}
+ 
+.picker {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.inputName{
+  font-size:28rpx;
+}
+.showView{
+  display: none;
+}
+

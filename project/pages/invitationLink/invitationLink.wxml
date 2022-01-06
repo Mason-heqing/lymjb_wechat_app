@@ -1,0 +1,80 @@
+<!--pages/invitationLink/invitationLink.wxml-->
+<view class='container'>
+  <view class='page-body'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <picker bindchange="companySelect" value="{{form.tihuoWay}}" range="{{companyArray}}">
+        <view class='my-header'>
+          <view class='list-msg2'>
+            <view class="companyName">
+              <input name="tihuoWay" hidden='true' value="{{form.tihuoWay}}" />
+              <text>{{form.tihuoWay}}</text>
+            </view>
+            <view class="address">
+              <input name="officeAddress" hidden='true' data-name='officeAddress' bindinput='trimOfficeAddress' value="{{form.officeAddress}}" />
+              <text>{{form.officeAddress}}</text>
+            </view>
+            <view>
+             <input name="id" hidden='true' value="{{form.id}}" />
+            </view>
+          </view>
+          <view class="arraw">
+            <image class="right_img" src='../../images/arrow.png'></image>
+          </view>
+          <!-- 下拉需要显示的列表 -->
+        </view>
+      </picker>
+      <!-- <view class="select_box" wx:if="{{select}}">
+        <block wx:for="{{selectList}}" wx:key="selectList">
+          <view class="select_one" bindtap="mySelect" data-name="{{item.name}}">{{item.name}}</view>
+        </block>
+      </view> -->
+      <view class='section my_firm'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>姓名</text>
+        </view>
+        <view class='section_name'>
+          <picker bindchange="causeSelect" value="form.asterask" range="{{causeAeeay}}">
+            <input name="asterask" data-name='asterask' hidden='true' bindinput='trimAsterask' value="{{form.asterask}}" />
+            <text>{{form.asterask}}</text>
+            <image class="right_img" src='../../images/arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <view class='section my_firm'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>手机号</text>
+        </view>
+        <view class='section_name'>
+          <picker mode="date" value="{{date}}" bindchange="dateSelect">
+            <view>
+              <input name="date" hidden='true' value="{{form.date}}" />
+              <text>{{form.date}}</text>
+              <image class="right_img" src='../../images/arrow.png'></image>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='section my_firm'>
+        <view class='section__title'>
+          <text class="asterask">*</text>
+          <text>证件号码</text>
+        </view>
+        <view class='section_name'>
+          <picker value="{{form.idNo}}" bindchange="dateSelect">
+            <view>
+              <input name="date" hidden='true' value="{{form.idNo}}" />
+              <text>{{form.idNo}}</text>
+              <image class="right_img" src='../../images/arrow.png'></image>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="send_intitation">
+        <button form-type="submit">发送邀请</button>
+      </view>
+    </form>
+
+  </view>
+</view>
